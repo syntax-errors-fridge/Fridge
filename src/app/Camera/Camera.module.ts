@@ -6,9 +6,9 @@ import { RouterModule } from '@angular/router';
 
 import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 
-constructor(private camera: Camera) { }
-
-...
+export class YouClassService {
+  constructor(private camera: Camera) { }
+}
 
 
 const options: CameraOptions = {
