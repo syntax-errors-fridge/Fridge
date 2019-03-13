@@ -9,18 +9,7 @@
 
 <ion-content>
     <ion-card class="welcome-card">
-      <div>
-        <ion-input style="background-color: gray" type="text" [(ngModel)] = "encodeText"></ion-input>
-        <button ion-button block (click)="encode()"> Encode</button>
-      </div>
-      <div>
-        <button ion-button block (click)="scan()"> Scan</button>
-        <div *ngIf="scannedData.text">
-          <label>Your barcode is</label>
-          <br>
-          <span>{{scannedData.text}}</span>
-        </div>
-      </div>
+      
       <ion-card-header>
         <ion-card-title>Welcome to Your Fridge</ion-card-title>
       </ion-card-header>
