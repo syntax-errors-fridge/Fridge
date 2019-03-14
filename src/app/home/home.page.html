@@ -37,4 +37,18 @@
         <ion-label>Broccoli</ion-label>
       </ion-item>
     </ion-list>
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Barcode Scanner</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    
+    <ion-content padding>
+    
+      <h1>Click To Scan</h1>
+    
+      <ion-button color="secondary" (click)="scanCode()">Scan Code</ion-button>
+      {{barcodeData.text}}
+      <!-- <button ion-button round (click)="scanCode()">Scan Code</button> -->
+    </ion-content>
 </ion-content>
