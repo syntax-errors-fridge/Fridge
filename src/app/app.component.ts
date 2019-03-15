@@ -4,7 +4,6 @@ import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 
-import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
 
 
 
@@ -31,7 +30,6 @@ export class AppComponent {
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
-    private barcodeScanner: BarcodeScanner
   ) {
     this.initializeApp();
   }

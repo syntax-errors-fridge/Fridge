@@ -14,7 +14,12 @@ const routes: Routes = [
   {
     path: 'list',
     loadChildren: './list/list.module#ListPageModule'
+  },
+  { 
+    path: 'fridge-list/:id', 
+    loadChildren: './fridge-list/fridge-list.module#FridgeListPageModule'
   }
+
 ];
 
 @NgModule({

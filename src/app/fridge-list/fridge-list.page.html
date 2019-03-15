@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>My Fridge List</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+
+
+<ion-list>
+  <ion-item button *ngFor="let item of (results | async)" [routerLink]="['/', 'fridge-list', item.imbID]">
+    {{ item.Title }}
+  </ion-item>
+</ion-list>
+</ion-content>
