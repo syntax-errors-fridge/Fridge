@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { BarcodeScanner, BarcodeScannerOptions } from '@ionic-native/barcode-scanner';
 import { NavController } from '@ionic/angular';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
+
 
 @Component({
   selector: 'app-home',
@@ -8,6 +10,7 @@ import { NavController } from '@ionic/angular';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+<<<<<<< HEAD
   options: BarcodeScannerOptions;
   encodText:string='';
   encodedData: any={};
@@ -33,3 +36,20 @@ export class HomePage {
     })
   }
 }
+=======
+    barcodeData;
+    constructor(private barcodeScanner: BarcodeScanner) {
+
+    }
+    scanCode() {
+      this.barcodeScanner.scan().then(barcodeData => {
+        
+        
+        this.barcodeData = barcodeData;
+       }).catch(err => {
+           console.log('Error', err);
+       });
+    }
+
+}
+>>>>>>> 04d7b439948404a29c3c7d451d5acd9251f6d97e
