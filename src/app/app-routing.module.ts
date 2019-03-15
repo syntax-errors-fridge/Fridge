@@ -16,7 +16,7 @@ const routes: Routes = [
     loadChildren: './list/list.module#ListPageModule'
   },
   { 
-    path: 'fridge-list/:id', 
+    path: 'fridge-list', 
     loadChildren: './fridge-list/fridge-list.module#FridgeListPageModule'
   }
 

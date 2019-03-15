@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { FridgeListPage } from '../fridge-list/fridge-list.page';
 
 export enum SearchType {
   all = '',
@@ -13,7 +14,7 @@ export enum SearchType {
   providedIn: 'root'
 })
 export class BarcodeDataService {
-  url = 'https://api.barcodelookup.com/v2/products?key=your_api_key'
+  url = 'https://api.barcodelookup.com/v2/products?barcode=&formatted=y&key=';
   apiKey = '4r6ju8v7pvhximmzpezk041sky5rp7';
   constructor(private http: HttpClient) { }
 
