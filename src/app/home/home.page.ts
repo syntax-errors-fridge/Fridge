@@ -15,8 +15,8 @@ export class HomePage {
     }
     scanCode() {
       this.barcodeScanner.scan().then(barcodeData => {
-        
-        
+
+
         this.barcodeData = barcodeData;
        }).catch(err => {
            console.log('Error', err);
