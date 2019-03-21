@@ -18,14 +18,13 @@
       <ion-select-option value="food">Food</ion-select-option>
     </ion-select>
   </ion-item>
-  <ion-item href="https://api.barcodelookup.com/v2/products?barcode=0041900072827&formatted=y&key=4r6ju8v7pvhximmzpezk041sky5rp7">
-    <ion-icon slot= "start" name="add-circle"></ion-icon>
-    <ion-label>Milk</ion-label>
-  </ion-item>
+  
   
   <ion-list>
-    <ion-item button *ngFor="let item of (results | async)" [routerLink]="['/', 'fridge-list', item.imbID]">
-      {{ item.Title }}
-    </ion-item>
+    <ion-label>Your Fridge</ion-label>
+      <ion-item *ngIf="data">
+        <p>{{data.text}}</p>
+      </ion-item>
   </ion-list>
 </ion-content>
+

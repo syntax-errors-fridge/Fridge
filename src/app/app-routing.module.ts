@@ -11,10 +11,6 @@ const routes: Routes = [
     path: 'home',
     loadChildren: './home/home.module#HomePageModule'
   },
-  {
-    path: 'list',
-    loadChildren: './list/list.module#ListPageModule'
-  },
   { 
     path: 'fridge-list', 
     loadChildren: './fridge-list/fridge-list.module#FridgeListPageModule'
