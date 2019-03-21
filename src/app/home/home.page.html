@@ -22,7 +22,7 @@
      </ion-list-header>
 
 
-     <ion-item href="file:///C:/Users/kongj/Desktop/download.jpg">
+     <ion-item (click)="viewDetail()">
       <ion-label id ="ProductName"></ion-label>
       <ion-icon slot="start" color="medium" name="basket"></ion-icon>
     </ion-item>
@@ -38,15 +38,6 @@
 
      <ion-button color="secondary" (click)="getAPIdata()">Add To Fridge</ion-button>
 
-<<<<<<< HEAD
-     <ion-button color="secondary" (click) = 'sendData()'>Add to fridge list</ion-button>
 
-     <body onload="getAPIdata()">
-        
-      <strong>Product Name: </strong> <div id="ProductName"></div><br/>
-      
-        </body>
-=======
->>>>>>> 852a93d1f84573698b76e79f53cb530aac0ddac7
    </ion-content>
 </ion-content>

@@ -50,12 +50,7 @@ export class HomePage {
          //window.open("https://api.barcodelookup.com/v2/products?barcode=" + barcodeData.text + "@formatted=y&key=4r6ju8v7pvhximmzpezk041sky5rp7");
                   }
                   
-    sendData() {
-      let navigationExtras: NavigationExtras = {
-        queryParams: {
-          special: JSON.stringify(this.product_name)
-        }
-      }
-      this.router.navigate(['fridge-list'], navigationExtras);
+    viewDetail() {
+      this.navCtrl.navigateRoot('/details')
     }
 }

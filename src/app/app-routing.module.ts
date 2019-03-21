@@ -14,7 +14,8 @@ const routes: Routes = [
   { 
     path: 'fridge-list', 
     loadChildren: './fridge-list/fridge-list.module#FridgeListPageModule'
-  }
+  },  { path: 'details', loadChildren: './details/details.module#DetailsPageModule' }
+
 
 ];
 

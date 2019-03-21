@@ -15,14 +15,7 @@ export class FridgeListPage{
   type: SearchType = SearchType.all;
 
   constructor(private barcodeDataService: BarcodeDataService,
-    private route: ActivatedRoute, private router: Router) {
-    this.route.queryParams.subscribe(params => {
-      console.log('params: ', params);
-      if (params && params.special) {
-          this.data = JSON.parse(params.special);
-        }
-      });
-     }
+    private route: ActivatedRoute, private router: Router) {}
   ngOnInit() {
   }
 
