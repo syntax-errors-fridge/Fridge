@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { SearchType, BarcodeDataService } from 'src/app/services/barcode-data.service';
-import { HTTP } from '@ionic-native/http/ngx';
 
 @Component({
   selector: 'app-fridge-list',
@@ -14,8 +13,7 @@ export class FridgeListPage{
   searchTerm= '';
   type: SearchType = SearchType.all;
 
-  constructor(private barcodeDataService: BarcodeDataService,
-    private http: HTTP) { }
+  constructor(private barcodeDataService: BarcodeDataService) { }
   ngOnInit() {
   }
 
