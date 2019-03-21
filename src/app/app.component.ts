@@ -20,12 +20,7 @@ export class AppComponent {
       icon: 'home'
     },
     {
-      title: 'List',
-      url: '/list',
-      icon: 'list'
-    },
-    {
-      title: 'Fridge',
+      title: 'My Fridge List',
       url: '/fridge-list',
       icon: 'list'
     }

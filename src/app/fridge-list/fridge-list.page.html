@@ -11,10 +11,6 @@
 
   <ion-label> Search Food Here</ion-label>
   <ion-searchbar type= "text" [(ngModel)]="userInput"> </ion-searchbar>
-  <ion-item href="https://api.barcodelookup.com/v2/products?barcode=0041900072827&formatted=y&key=4r6ju8v7pvhximmzpezk041sky5rp7">
-    <ion-icon slot= "start" name="add-circle"></ion-icon>
-    <ion-label>akhil's Milk</ion-label>
-  </ion-item>
   <ion-item>
     <ion-label>Select Searchtype</ion-label>
     <ion-select [(ngModel)]="type" (ionChange)="seachChanged($event)">
@@ -24,8 +20,19 @@
   </ion-item>
 
   <ion-list>
+    
+  <ion-label>Your Fridge</ion-label>
+  <ion-item href="file:///C:/Users/kongj/Desktop/download.jpg">
+    <ion-label id ="ProductName"></ion-label>
+
+    <ion-icon slot="start" color="medium" name="basket"></ion-icon>
+  </ion-item>
+
+
+
     <ion-item button *ngFor="let item of (results | async)" [routerLink]="['/', 'fridge-list', item.imbID]">
       {{ item.Title }}
     </ion-item>
   </ion-list>
 </ion-content>
+

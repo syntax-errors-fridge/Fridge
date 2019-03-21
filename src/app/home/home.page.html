@@ -1,54 +1,32 @@
 <ion-header>
-  <ion-toolbar color='primary'>
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title>Fridge</ion-title>
-  </ion-toolbar>
+ <ion-toolbar color='primary'>
+   <ion-buttons slot="start">
+     <ion-menu-button></ion-menu-button>
+   </ion-buttons>
+   <ion-title>vitalFridge</ion-title>
+ </ion-toolbar>
 </ion-header>
 
 <ion-content>
-    <ion-card class="welcome-card">
-      <ion-card-header>
-        <ion-card-title>Welcome to Your Fridge</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        <p>Use the camera scanner to add food to your Fridge List.</p>
-      </ion-card-content>
-    </ion-card>
-    <ion-list lines="none">
-      <ion-list-header>
-        <ion-label>Quick Look</ion-label>
-      </ion-list-header>
-      <ion-item href="file:///C:/Users/kongj/Desktop/download.jpg">
-        <ion-icon slot="start" color="medium" name="basket"></ion-icon>
-        <ion-label>Banana</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/building/scaffolding%22%3E
-        <ion-icon slot="start" color="medium" name="basket"></ion-icon>
-        <ion-label>Apple</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/layout/structure%22%3E
-        <ion-icon slot="start" color="medium" name="basket"></ion-icon>
-        <ion-label>Chicken</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/theming/basics%22%3E
-        <ion-icon slot="start" color="medium" name="basket"></ion-icon>
-        <ion-label>Broccoli</ion-label>
-      </ion-item>
-    </ion-list>
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Barcode Scanner</ion-title>
-      </ion-toolbar>
-    </ion-header>
+   <ion-card class="welcome-card">
+     <ion-card-header>
+       <ion-card-title>Welcome to Your Fridge</ion-card-title>
+     </ion-card-header>
+     <ion-card-content>
+       <p>Use the barcode scanner to add food to your Fridge List.</p>
+     </ion-card-content>
+   </ion-card>
+   <ion-content>
+     <h1>Click To Scan</h1>
+  
+     <ion-button color="secondary" (click)="scanCode()">Scan Code</ion-button>
 
-    <ion-content padding>
+     <ion-button color="secondary" (click)="getAPIdata()">get barcode info</ion-button>
 
-      <h1>Click To Scan</h1>
-
-      <ion-button color="secondary" (click)="scanCode()">Scan Code</ion-button>
-      {{barcodeData.text}}
-      <!-- <button ion-button round (click)="scanCode()">Scan Code</button> -->
-    </ion-content>
+     <body onload="getAPIdata()">
+        
+      <strong>Product Name: </strong> <div id="ProductName"></div><br/>
+      
+        </body>
+   </ion-content>
 </ion-content>
